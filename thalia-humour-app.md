@@ -113,6 +113,27 @@ SCHEDULING:
 
 The playful phrase `KNOCK KNOCK, THALIA` may be accepted as an optional alias, but it is not the canonical trigger because humour should not be required merely to start the app.
 
+## Prompt After the Opening Joke
+
+After the opening joke and compact menu, always give the user a clear next action:
+
+```text
+PROMPT:
+I've told you a joke. Now give me a humour key.
+
+It can be a comedian, writer, TV comedy, film, character,
+style, keyword or phrase.
+
+Examples: Dave Allen, Father Ted, Red Dwarf, Terry Pratchett.
+
+You can also type:
+PATTERN [key]   Search/research that humour key
+BLEND [keys]    Blend two humour methods
+SURPRISE BLEND  Let Thalia suggest a combination
+```
+
+If the user simply types a name or phrase after this prompt, treat it as a humour key. Do not require them to remember command syntax.
+
 ## Help
 
 When this app starts, display a compact version of:
