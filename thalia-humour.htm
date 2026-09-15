@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thalia Humour</title>
+<style>
+:root{font-family:system-ui,sans-serif;color-scheme:light dark}body{max-width:760px;margin:auto;padding:1rem;line-height:1.45}
+header,section{padding:1rem;margin:.7rem 0;border:1px solid #888;border-radius:14px}h1{margin:.1rem 0}.mark{font-size:2rem}
+input,textarea,select,button{font:inherit;padding:.75rem;border-radius:10px;border:1px solid #888}input,textarea{width:100%;box-sizing:border-box}
+.actions{display:flex;flex-wrap:wrap;gap:.5rem;margin:.7rem 0}button{cursor:pointer}.output{white-space:pre-wrap;min-height:5rem}
+small{opacity:.8}.hidden{display:none}
+</style>
+</head>
+<body>
+<header><div class="mark">T-)</div><h1>Thalia Humour</h1>
+<p>Explore how humour works, build a humour key, blend methods, or ask your AI for a fresh joke.</p></header>
+
+<section>
+<h2>What would you like to do?</h2>
+<div class="actions"><button id="joke">Tell me a joke</button><button id="research">Search / create humour key</button><button id="blend">Blend</button><button id="surprise">Surprise blend</button></div>
+<label for="key"><b>Humour key</b></label>
+<input id="key" placeholder="Dave Allen, Father Ted, Red Dwarf, Terry Pratchett…">
+<p><small>Type a comedian, writer, TV comedy, film, character, style, keyword or phrase.</small></p>
+<label for="subject"><b>Optional joke subject</b></label>
+<input id="subject" placeholder="e.g. local council, breakfast, AI job interview">
+<div class="actions"><button id="build">Build AI prompt</button><button id="copy">Copy prompt</button><button id="share">Share prompt</button></div>
+</section>
+
+<section>
+<h2>Prompt for your AI</h2>
+<div id="out" class="output">I've told you a joke. Now give me a humour key.</div>
+</section>
+
+<section>
+<h2>Feedback</h2>
+<div class="actions"><button data-v="up">Thumbs up</button><button data-v="down">Thumbs down</button><button id="save">Create Thalia-Humour.md</button></div>
+<p id="stats"><small>Feedback stays on this device unless you choose to share/export it.</small></p>
+</section>
+
+<section>
+<h2>Help</h2>
+<p><b>PATTERN [key]</b> researches a humour key. <b>BLEND [keys]</b> combines methods. <b>SURPRISE BLEND</b> asks the AI to suggest a combination. If a key is missing from the Thalia Humour Base, the AI should research it and create a proposed method MD.</p>
+<p><small>This static page does not itself call an AI or write to GitHub. It builds portable prompts and files for the AI you choose.</small></p>
+</section>
+
+<script>
+const $=id=>document.getElementById(id), out=$('out');
+let mode='PATTERN', votes=JSON.parse(localStorage.getItem('thaliaVotes')||'{"up":0,"down":0}');
+function prompt(){
+ const key=$('key').value.trim()||'[ASK ME FOR A HUMOUR KEY]';
+ const subject=$('subject').value.trim();
+ const extra=subject?'\nJOKE SUBJECT: '+subject:'';
+ return `START THALIA
+MODE: ${mode}
+HUMOUR KEY: ${key}${extra}
+
+Use the attached/current Thalia Humour App specification if available.
+Search the accessible Thalia Humour Base for the key. If found, read it, research again where research is available, compare and preserve useful existing findings. If absent, research it and create a PROPOSED Humour Method MD. Do not invent sources or claim a save/write that did not occur.
+After one or two jokes, you may offer an optional blend. If a blend introduces a missing key, research that key first.
+After the joke, invite lightweight feedback and then prompt: "I've told you a joke. Now give me a humour key."`;
+}
+function build(){out.textContent=prompt()}
+$('build').onclick=build;
+$('research').onclick=()=>{mode='PATTERN';build()};
+$('joke').onclick=()=>{mode='JOKE';build()};
+$('blend').onclick=()=>{mode='BLEND';build()};
+$('surprise').onclick=()=>{mode='SURPRISE BLEND';build()};
+$('copy').onclick=async()=>{build();await navigator.clipboard.writeText(out.textContent)};
+$('share').onclick=async()=>{build(); if(navigator.share) await navigator.share({title:'Thalia Humour',text:out.textContent}); else await navigator.clipboard.writeText(out.textContent)};
+document.querySelectorAll('[data-v]').forEach(b=>b.onclick=()=>{votes[b.dataset.v]++;localStorage.setItem('thaliaVotes',JSON.stringify(votes));$('stats').textContent=`This device: ${votes.up} up / ${votes.down} down`});
+$('save').onclick=()=>{
+ const text=`# Thalia Humour\n\n## Humour key\n- ${$('key').value||'Not set'}\n\n## Joke subject\n- ${$('subject').value||'Not set'}\n\n## Local feedback\n- Thumbs up: ${votes.up}\n- Thumbs down: ${votes.down}\n\n## Note\nPersonal portable humour profile. Review and expand with an AI using the Thalia Humour App.\n`;
+ const blob=new Blob([text],{type:'text/markdown'}),u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download='Thalia-Humour.md';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);
+};
+</script>
+</body></html>
