@@ -17,7 +17,7 @@ small{opacity:.8}.hidden{display:none}
 
 <section>
 <h2>What would you like to do?</h2>
-<div class="actions"><button id="joke">Tell me a joke</button><button id="research">Search / create humour key</button><button id="blend">Blend</button><button id="surprise">Surprise blend</button></div>
+<div class="actions"><button id="joke">Tell me a joke</button><button id="research">Search / create humour key</button><button id="blend">Blend</button><button id="surprise">Surprise blend</button><button id="punchline">Game 1: Punchline</button><button id="trap">Game 2: Joke Trap</button></div>
 <label for="key"><b>Humour key</b></label>
 <input id="key" placeholder="Dave Allen, Father Ted, Red Dwarf, Terry Pratchett…">
 <p><small>Type a comedian, writer, TV comedy, film, character, style, keyword or phrase.</small></p>
@@ -39,7 +39,7 @@ small{opacity:.8}.hidden{display:none}
 
 <section>
 <h2>Help</h2>
-<p><b>PATTERN [key]</b> researches a humour key. <b>BLEND [keys]</b> combines methods. <b>SURPRISE BLEND</b> asks the AI to suggest a combination. If a key is missing from the Thalia Humour Base, the AI should research it and create a proposed method MD.</p>
+<p><b>PATTERN [key]</b> researches a humour key. <b>BLEND [keys]</b> combines methods. <b>SURPRISE BLEND</b> asks the AI to suggest a combination. <b>Punchline</b> gives the setup, waits for you, then reveals the punchline. <b>Joke Trap</b> asks you for a difficult setup and tries to rescue it with a punchline. If a key is missing from the Thalia Humour Base, the AI should research it and create a proposed method MD.</p>
 <p><small>This static page does not itself call an AI or write to GitHub. It builds portable prompts and files for the AI you choose.</small></p>
 </section>
 
@@ -65,6 +65,29 @@ $('research').onclick=()=>{mode='PATTERN';build()};
 $('joke').onclick=()=>{mode='JOKE';build()};
 $('blend').onclick=()=>{mode='BLEND';build()};
 $('surprise').onclick=()=>{mode='SURPRISE BLEND';build()};
+$('punchline').onclick=()=>{mode='PUNCHLINE GAME';out.textContent=`START THALIA
+MODE: PUNCHLINE GAME
+
+Play the Punchline game.
+1. Create a fresh joke using the current humour key if one is supplied.
+2. Give me the setup only. WITHHOLD THE PUNCHLINE.
+3. Stop and wait for any natural continuation from me, such as Enter, "go on", "yes?", "what?", "carry on", or equivalent.
+4. Only after I respond, reveal the punchline.
+5. Then ask for lightweight feedback: thumbs up/down or 1-10.
+6. Do not reveal or hint at the punchline before I respond.
+7. After feedback, offer another round or a humour key/blend.`};
+$('trap').onclick=()=>{mode='JOKE TRAP';out.textContent=`START THALIA
+MODE: JOKE TRAP
+
+Play Joke Trap.
+1. Ask me to give you an awkward, strange or difficult joke setup with NO punchline.
+2. Preserve my setup. Do not rewrite it merely to make your task easier.
+3. Find semantic hooks, ambiguities, callbacks, reversals, puns or other Thalia mechanisms that could rescue it.
+4. Produce a fresh punchline that makes as much of the original setup as possible look intentional.
+5. Briefly identify the rescue mechanism only if I ask.
+6. Ask for thumbs up/down or a 1-10 rating.
+7. Offer another trap after feedback.
+Optional reverse round: you give the setup, I attempt a punchline first, then you provide your alternative.`};
 $('copy').onclick=async()=>{build();await navigator.clipboard.writeText(out.textContent)};
 $('share').onclick=async()=>{build(); if(navigator.share) await navigator.share({title:'Thalia Humour',text:out.textContent}); else await navigator.clipboard.writeText(out.textContent)};
 document.querySelectorAll('[data-v]').forEach(b=>b.onclick=()=>{votes[b.dataset.v]++;localStorage.setItem('thaliaVotes',JSON.stringify(votes));$('stats').textContent=`This device: ${votes.up} up / ${votes.down} down`});
