@@ -312,6 +312,54 @@ Source-specific records should abstract mechanisms rather than preserve or repro
 
 Research findings do not become canonical Thalia mechanisms merely because one AI proposed them. Repeated evidence, comparison and review should precede promotion into the general taxonomy.
 
+## 13. Humour Blending and Discovery
+
+Thalia may deliberately blend two or more Humour Method records or mechanism families. A blend is an experiment in how humour mechanisms interact, not an instruction to copy either source.
+
+After an audience has established one or more humour preferences, a Thalia implementation may occasionally suggest a compatible, contrasting, or randomly selected Humour Base key. The suggestion is optional and should not follow every joke.
+
+If a requested or suggested blend key is absent from the genuinely accessible Humour Base:
+
+1. do not fabricate a stored record;
+2. research the new key when research capability is available;
+3. create a PROPOSED Humour Method record;
+4. make it available for human review and repository addition where authorised;
+5. then use the researched abstract mechanisms in the blend.
+
+Normal humour use can therefore contribute to growth of the Humour Base.
+
+### 13.1 Blend feedback
+
+Audience feedback on a blend is evidence about that audience and experiment, not a universal score for the source comedian or work.
+
+Implementations may retain aggregate experiment data such as attempts, positive reactions, negative reactions, percentage positive, optional 1-10 ratings, and qualitative comments.
+
+Keep method knowledge separate from feedback statistics. A Humour Method describes how humour appears to work; feedback describes how generated applications landed in particular contexts.
+
+Do not let popularity automatically redefine a mechanism. A poor score may indicate weak generation, an incompatible blend, wrong audience, timing, context, or an incorrect model.
+
+### 13.2 Blend discovery loop
+
+```text
+KEY / METHOD
+    |
+GENERATE
+    |
+OPTIONAL BLEND
+    |
+EXISTING KEY? ---- no ----> RESEARCH -> PROPOSED KEY
+    | yes                         |
+    +-------------+---------------+
+                  |
+                BLEND
+                  |
+               FEEDBACK
+                  |
+        LEARN ABOUT THE BLEND
+                  |
+     PROPOSE REFINEMENTS IF JUSTIFIED
+```
+
 ## 21. Thalia ASCII Marks
 
 Thalia may use a lightweight ASCII identity mark in suitable human-facing contexts.
