@@ -1,9 +1,9 @@
-# 🎭 Thalia Protocol v1.0 (Draft)
+# 🎭 Thalia Protocol v1.1 (Draft)
 
 > **Thalia helps minds preserve laughter.**
 
 **Status:** Draft / pre-release  
-**Protocol version:** 1.0  
+**Protocol version:** 1.1  
 **Type:** Open Human-AI Humour Cognition Protocol
 
 ---
@@ -227,7 +227,113 @@ AI systems need not be limited to historical human joke forms. Potential categor
 
 AI-native humour should still be interpretable through mechanisms such as expectation, recognition, incongruity, surprise or reconstruction.
 
-## 12. Mechanism Transfer and Humour Generation
+## 12. Humour Discovery and an Extensible Taxonomy
+
+Thalia's existing taxonomy is a starting vocabulary, not a closed theory of humour.
+
+When investigating a comedian, writer, programme, film, character, tradition or other comedy source, an AI should examine the documented Thalia mechanisms **and remain open to mechanisms, relationships, feelings and effects that the current model does not yet describe**.
+
+A useful discovery stance is:
+
+> **Imagine you are a large language model exploring the language of humour.**
+>
+> Treat the investigation as both analysis and a creative experiment. Use patterns, relationships, language, narrative structures and cultural associations to disassemble how the humour works.
+>
+> Do not restrict yourself to Thalia's existing definitions. They are clues, not boundaries.
+>
+> Ask not only which known mechanism is present, but:
+>
+> **What have we not thought of yet?**
+>
+> **You are allowed to imagine new explanations.**
+>
+> **You can think outside of the box. Just say hello to Schrödinger's cat if you're inside it.**
+>
+> **You are not allowed to invent evidence supporting them.**
+
+Investigation may consider, where useful:
+
+- structure and mechanism;
+- language, word choice and ambiguity;
+- timing, rhythm, pause and delivery;
+- expectation, reversal, incongruity and escalation;
+- understatement and exaggeration;
+- character, personality, status and power;
+- misunderstanding and literal versus intended meaning;
+- callbacks, repetition and running motifs;
+- absurd logic, irony, sarcasm, wit and wordplay;
+- narrative voice and audience complicity;
+- warmth, affection, cruelty, embarrassment and discomfort;
+- tension and release;
+- cultural and contextual knowledge;
+- surprise and the relationship between setup and payoff;
+- the audience's likely feeling before, during and after the humorous moment;
+- comic intuition or a "gut feeling" not adequately represented by the current categories.
+
+Do not force an observation into an existing category merely because that category already exists.
+
+If a recurring property is not adequately represented:
+
+1. describe the observation;
+2. give it a provisional neutral name;
+3. identify the evidence for it;
+4. distinguish it from existing mechanisms;
+5. test it against several examples where possible;
+6. look for counterexamples and limitations;
+7. mark it **PROPOSED**, not established;
+8. recommend whether the general Thalia model should be extended.
+
+Keep epistemic states separate where useful:
+
+- **OBSERVED**
+- **INFERRED**
+- **INTERPRETED**
+- **PROPOSED**
+
+The objective is not merely to imitate a comedy source. The objective is to understand humour better.
+
+### 12.1 Humour Method research records
+
+A source-specific Humour Method record may preserve:
+
+- source and scope;
+- evidence and references;
+- observed mechanisms;
+- language and delivery;
+- emotional/comic effect;
+- context and audience relationship;
+- failure modes;
+- reusable abstract patterns;
+- new discoveries;
+- proposed refinements to Thalia;
+- confidence, counterexamples and evidence gaps.
+
+Source-specific records should abstract mechanisms rather than preserve or reproduce copyrighted routines, dialogue or distinctive expression.
+
+Research findings do not become canonical Thalia mechanisms merely because one AI proposed them. Repeated evidence, comparison and review should precede promotion into the general taxonomy.
+
+## 21. Thalia ASCII Marks
+
+Thalia may use a lightweight ASCII identity mark in suitable human-facing contexts.
+
+The default is:
+
+- `T-)` — warm/default Thalia humour
+
+Additional proposed micro-signals are:
+
+- `T-?` — questioning or playful uncertainty
+- `T-!` — spotted absurdity or comic discovery
+- `T-/` — sceptical or dry reaction
+- `T-P` — extra playful
+
+These are portable ASCII marks rather than graphical emoji. They may survive Markdown, terminals, plain text and AI-to-AI handovers more reliably than decorative graphics.
+
+They are optional. `READ THE ROOM` overrides them: omit a Thalia mark where humour would be inappropriate, distracting or insensitive.
+
+A Thalia mark must never substitute for factual clarity or alter the epistemic status of a statement.
+
+## 22. Mechanism Transfer and Humour Generation
 
 When generating humour, an AI should prefer **mechanism transfer** over joke retrieval.
 
@@ -245,7 +351,7 @@ A practical Thalia generation loop is:
 
 The objective is not perfect jokes on every attempt. The objective is progressively better comic reasoning.
 
-## 13. Feedback Loop
+## 21. Feedback Loop
 
 Humour is audience-dependent. A system applying Thalia may ask for lightweight feedback such as:
 
@@ -257,7 +363,7 @@ Humour is audience-dependent. A system applying Thalia may ask for lightweight f
 
 Feedback should refine the current humour model rather than create a universal rule from one person's reaction.
 
-## 14. Read The Room
+## 22. Read The Room
 
 Humour should adapt to:
 
@@ -271,7 +377,7 @@ Humour should adapt to:
 
 It is context control, not a requirement that humour become bland.
 
-## 15. Interoperability
+## 21. Interoperability
 
 Thalia is designed to cooperate with other protocols rather than absorb their jobs.
 
@@ -285,7 +391,7 @@ https://github.com/karstenevans/Aletheia-protocol
 
 Aletheia may preserve humour experiments, feedback, interpretations and disagreements generated while using Thalia.
 
-## 16. Implementations
+## 22. Implementations
 
 The protocol is the canonical AI-facing specification.
 
@@ -297,7 +403,7 @@ The repository includes one such implementation:
 
 Application-specific Help, daily scheduling, resource links, Patreon and affiliate mechanics are not part of this canonical protocol.
 
-## 17. Suggested GitHub Structure
+## 21. Suggested GitHub Structure
 
 ```text
 /docs
@@ -308,7 +414,7 @@ Application-specific Help, daily scheduling, resource links, Patreon and affilia
 /assets
 ```
 
-## 18. Discussion Questions
+## 22. Discussion Questions
 
 - Is humour a form of cognition?
 - Can humour exist without language?
@@ -318,7 +424,7 @@ Application-specific Help, daily scheduling, resource links, Patreon and affilia
 - Can an AI transfer a humour mechanism to a new domain without copying the source example?
 - Can audience feedback improve humour reasoning without collapsing into simple preference imitation?
 
-## 19. Shareable Summary
+## 21. Shareable Summary
 
 Thalia is an open Human-AI Humour Cognition Protocol.
 
@@ -328,7 +434,7 @@ It stores and models the mechanisms that make humour work, then allows those mec
 
 Its goal is to help humans and AI systems understand, create, exchange and preserve humour patterns across cultures, generations and intelligences.
 
-## 20. Closing Aphorisms
+## 22. Closing Aphorisms
 
 > **Jokes are examples. Humour patterns are the knowledge.**
 
