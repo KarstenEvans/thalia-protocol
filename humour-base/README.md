@@ -2,6 +2,8 @@
 
 [Aletheia Protocol](https://github.com/KarstenEvans/aletheia-protocol) (provenance, evidence and uncertainty) | [Thalia Protocol](https://github.com/KarstenEvans/thalia-protocol/blob/main/THALIA_PROTOCOL.md) (humour mechanisms, creative transfer and Read The Room)
 
+**[Open the Humour Base browser](index.html)** · [Machine-readable pattern catalogue](patterns.json) · [Browser page specification](index-page.md). The browser can load a selected pattern, prepare a request for one original joke, and read returned text using browser speech. Experimental on-device Chrome AI is optional; no direct Cloudflare service is connected. Live Pages/device behaviour remains unverified.
+
 **KISS: patterns are knowledge; jokes are examples.** This is the reusable Markdown library for Thalia. The Aletheia Humour *app and sketches* remain in `KarstenEvans/aletheia-app/aletheia-humour/`; their source-specific methods can be researched and indexed here.
 
 ## Published patterns
