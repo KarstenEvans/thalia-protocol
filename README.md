@@ -41,6 +41,14 @@ The permanent human-app resource page is:
 
 Tracked retailer URLs are kept on that website page, not inside the distributed app.
 
+## Humour Base browser
+
+**[Browse Thalia Humour Base](humour-base/index.html)** · [Pattern files and provenance](humour-base/README.md)
+
+Choose a reusable Markdown humour pattern such as Dave Allen, QI or Monty Python; request one **new original joke** through a copy/paste AI handoff, or experimentally through a supported Chrome on-device model, then use your browser's speech voices to hear it. **Five method files** are in [the explicit catalogue](humour-base/patterns.json); static sites cannot enumerate folders by themselves.
+
+This new HTML is a **source build**: hosted Pages availability, Chrome model generation, mobile speech playback and any future Cloudflare/OPT3 adapter require separate runtime testing. No existing Thalia app was removed or replaced, and no paid service is required to browse patterns.
+
 ## Repository map
 
 ```text
