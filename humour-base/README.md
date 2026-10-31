@@ -26,7 +26,7 @@ A portable explanation of **why** something is funny. Analyse Humour Gap, Vehicl
 - Avoid copies of copyrighted scripts or transcripts. Keep source claims, examples and original artistic inventions distinct. `qi.md` includes a historical comparison and original comedic monologue; the example remains a draft pending source/fact audit.
 - The folder is a research library, not a claim that a runtime, interface, scheduled agent or browse manifest is newly deployed.
 - Thalia's human-facing app already describes checking a Humour Base first. Direct GitHub links in this README are the KISS entry point. Static web pages cannot list directory contents automatically.
-- **Publishing boundary:** Commit the owner's reviewed research to this repository only. Contributions from others remain proposals requiring owner review rather than automatic anonymous GitHub writes.
+- **Publishing boundary:** Commit owner-authorised research to this repository only; draft publication is not independent fact review. Contributions from others remain proposals requiring owner review rather than automatic anonymous GitHub writes.
 
 ## Using the base with another AI
 
