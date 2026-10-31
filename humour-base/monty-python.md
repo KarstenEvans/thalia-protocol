@@ -2,7 +2,7 @@
 title: "Thalia Humour Pattern — Monty Python (mechanism overview)"
 humour_key: "monty-python"
 version: "0.1.0"
-status: "NEW DERIVED OVERVIEW — NOT A RECOVERED HISTORIC PATTERN"
+status: "NEW DERIVED DRAFT — NOT A RECOVERED HISTORIC PATTERN"
 created: "2026-10-31"
 pattern_type: "absurd logic / institutional ritual / semantic reversal"
 ---
