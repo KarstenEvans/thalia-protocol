@@ -1,4 +1,4 @@
-# AGENTS.md — Thalia Protocol v1.0
+# AGENTS.md — Thalia Protocol v1.2
 
 ## Repository roles
 
@@ -19,17 +19,20 @@ The protocol teaches an AI to:
 
 1. distinguish humorous content from the mechanism that makes it work;
 2. identify Humour Gap, Vehicle, Engine and reconstruction;
-3. use pattern families as mechanism labels rather than source material;
-4. transfer mechanisms into new humour instead of merely retrieving jokes;
-5. use audience feedback to improve later attempts;
-6. apply Read The Room according to context, stress, sensitivity, culture and purpose;
-7. explore AI-native humour as well as established human comic forms.
+3. use Humour Walkabout to widen the candidate space before original humour generation;
+4. seek unexpected but recognisable connections without treating semantic distance as the only route to humour;
+5. use pattern families as mechanism labels rather than source material;
+6. transfer and combine mechanisms instead of merely retrieving jokes;
+7. use audience feedback cautiously;
+8. apply Read The Room, Positivity-First and the Truth Boundary;
+9. explore AI-native humour and Silicon Wit as well as established human comic forms.
 
 ## Humour generation
 
 When asked to create humour under Thalia:
 
 - prefer original construction from mechanisms over joke retrieval;
+- perform Humour Walkabout before original humour generation;
 - establish an expectation and create a reconstructable humour gap;
 - preserve enough coherence for audience reconstruction;
 - do not confuse randomness with humour;
@@ -83,4 +86,4 @@ They may appear in repository README/support material, GitHub funding configurat
 
 ## Versioning
 
-Keep the public version at **v1.0 Draft / pre-release** until the first release is intentionally issued.
+The canonical public specification is **Thalia Protocol v1.2 Draft / pre-release** in `THALIA_PROTOCOL.md`. Do not silently substitute an older protocol version.
